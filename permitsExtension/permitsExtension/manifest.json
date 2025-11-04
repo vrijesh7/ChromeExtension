@@ -1,0 +1,174 @@
+{
+  "manifest_version": 3,
+  "name": "permitsExtension",
+  "version": "1.0",
+  "description": "PermitsExtension app helps employees autofill permit values.",
+  "permissions": [
+    "activeTab",
+    "cookies",
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://permits.synchrontms.com/*"
+  ],
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "action": {
+    "default_popup": "permit.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://admin.typeform.com/*",
+        "*://tntrips.tdot.tn.gov/*",
+        "*://txpros.txdmv.gov/*",
+        "*://permits.synchrontms.com/*",
+        "*://www.gaprospermits.com/*",
+        "*://truckpermits.dot.nm.gov/*",
+        "*://adotepro.azdot.gov/*",
+        "*://webapps.dot.illinois.gov/*",
+        "*://mcs.modot.mo.gov/*",
+        "*://motorcarrier.dor.in.gov/*",
+        "*://permitmanager.okladot.state.ok.us/*",
+        "*://alpass.dot.state.al.us/*",
+        "*://k-trips.ksdot.gov/*",
+        "*://permits.mdot.ms.gov/*", 
+        "*://apras.penndot.gov/*",
+        "*://apras.penndot.pa.gov/*", 
+        "*://www.apras.penndot.pa.gov/apras-web/*", 
+        "*://www.apras.penndot.pa.gov/apras-web/permit/application/create/",
+        "*://www.apras.penndot.pa.gov/apras-web/permit/application/create/*",
+        "*://idservices.pa.gov/*",
+        "*://ohid.ohio.gov/*",
+        "*://haulingpermits.transportation.ohio.gov/*",
+        "*://osw.motorcarrier.dor.in.gov/*",
+        "*://permits4idaho.com/*",
+        "*://idahodmvsso.b2clogin.com/*",
+        "*://kyowod.kytc.ky.gov/*",
+        "*://ia.gotpermits.com/*",
+        "*://www.movememaine.com/*",
+        "*://movememaine.com/*",
+        "*://nhdotpermits.org/*",
+        "*://esnoopipro.com/*",
+        "*://heavyhaul.net/*",
+        "*://wv.gotpermits.com/*",
+        "*://nj.gotpermits.com/*",
+        "*://marylandone.gotpermits.com/*",
+        "*://nhdotpermits.org/*",
+        "*://www.ri.gov/DOT/osow/*",
+        "*://coopr.codot.gov/*",
+        "*://marylandone.gotpermits.com/*",
+        "*://ar.gotpermits.com/*",
+        "*://mcs.modot.mo.gov/*",
+        "*://pas.fdot.gov/*",
+        "*://milogintp.michigan.gov/*",
+        "*://lageauxpm.dotd.la.gov/*",
+        "*://oasis.massdot.state.ma.us/*",
+        "*://cvoportal.ct.gov/*",
+        "*://ct.gotpermits.com/*",
+        "*://deldot.gov/*",
+        "*://sdaps.sd.gov/*",
+        "*://safehaul.scdot.org/*",
+        "*://app.udot.utah.gov/*", 
+        "*://apps.nd.gov/*",
+        "*://odvp.dot.nv.gov/*",
+        "*://my.ny.gov/*",
+        "*://hoocs.dot.ny.gov/*",
+        "*://pims.services.ncdot.gov/*",
+        "*://wi.gotpermits.com/*",
+        "*://dottruckpermits.nebraska.gov/*",
+        "*://www.esnoopipro.com/*",
+        "*://ezhaulvirginia.com/*",
+        "*://kyautomatedpermitsystem.com/*",
+        "*://www.ezhaulvirginia.com/*",
+        "*://idservices.penndot.gov/*",
+        "*://apras.penndot.gov/*",
+        "*://mdt.epart.celtic-host.com/*",
+        "*://mn.gotpermits.com/*",
+        "*://oregontruckingonline.com/*",
+        "*://www.oregontruckingonline.com/*",
+        "*://www.idservices.penndot.gov/*",
+        "*://www.apras.penndot.gov/*",
+        "*://calroute.dot.ca.gov/*",
+        "*://wydotpermits.wyo.gov/*",
+        "https://wydotpermits.wyo.gov/*",
+        "https://www.kyautomatedpermitsystem.com/*",
+        "https://mdotmitp.state.mi.us/*",
+        "https://www.oregonorion.com/*"
+        
+      
+        
+       
+        
+        
+       
+        
+
+        
+      ],
+      "js": [
+        "content.js",
+        "utilities.js",
+        "states/alabama/alabama.js",
+        "states/ohio/ohio.js",
+        "states/georgia/georgia.js",
+        "states/oklahoma/oklahoma.js",
+        "states/tennessee/tennessee.js",
+        "states/mississippi/mississippi.js",
+        "states/arizona/arizona.js",
+        "states/new-mexico/new-mexico.js",
+        "states/texas/texas.js",
+        "states/kansas/kansas.js",
+        "states/indiana/indiana.js",
+        "states/kentucky/kentucky.js",
+        "states/Idaho/Idaho.js",
+        "states/lowa/lowa.js",
+        "states/maine/maine.js",
+        "states/Illinois/Illinois.js",
+        "states/hampshire/hampshire.js",
+        "states/washington/washington.js",
+        "states/west-virginia/west-virginia.js",
+        "states/new-jersey/new-jersey.js",
+        "states/rhode-island/rhode-island.js",
+        "states/colorado/colorado.js",
+        "states/maryland/maryland.js",
+        "states/arkansas/arkansas.js",
+        "states/missouri/missouri.js",
+        "states/florida/florida.js",
+        "states/michigan/michigan.js",
+        "states/Louisiana/Louisiana.js",
+        "states/massachusetts/massachusetts.js",
+        "states/connecticut/connecticut.js",
+        "states/delaware/delaware.js",
+        "states/south-carolina/south-carolina.js",
+        "states/utah/utah.js",
+        "states/north-dakota/north-dakota.js",
+        "states/nevada/nevada.js",
+        "states/new-york/new-york.js",
+        "states/north-carolina/north-carolina.js",
+        "states/wisconsin/wisconsin.js",
+        "states/nebraska/nebraska.js",
+        "states/virginia/virginia.js",
+        "states/pennsylvania/pennsylvania.js",
+        "states/montana/montana.js",
+        "states/south-dakota/south-dakota.js",
+        "states/minnesota/minnesota.js",
+        "states/oregon/oregon.js",   
+        "states/california/california.js",
+        "states/Wyoming/Wyoming.js"
+
+        
+      ]
+    }
+  ]
+}
